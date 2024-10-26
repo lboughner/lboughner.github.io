@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Project 2: Sliding Picture Puzzle</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <script src="sliding-picture-puzzle.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Project 2: Sliding Picture Puzzle</h1>
+        </header>
+        <div id="main-content">
+            <!-- Game instructions: -->
+            <h2>Sliding Picture Puzzle - How to Play</h2>
+            <p>Your objective is to put the numbers below into the correct order by row, starting with 1 and ending with 15.
+            To do this, click on a numbered tile to move it into the empty space.
+            There are two game modes available: regular and simple.
+            Selecting <strong>New Game</strong> will start a regular game, scrambling all tiles and requiring more than one move to win.
+            <strong>Simple Game</strong> will start a game that sets one tile out of order, where only one move is needed to win.
+            To start another game of the same mode, you can click on its button again.
+            While already playing a game, you can change game modes by clicking on the button for the other mode.
+            <strong>Quit</strong> will end your current game if you wish to stop playing.<br><br>
+            Good luck and have fun!</p>
+
+            <!-- Buttons for each game mode: -->
+            <button onClick="mixBoard();">New Game</button>
+            <button onClick="simpleMixBoard();">Simple Game</button>
+
+            <hr>
+
+            <!-- Displaying user's time spent and moves made during a game: -->
+            <h3><strong>Current Game Statistics:</strong></h3>
+            <p>Game mode: <span id="show-game-mode">No game mode selected</span></p>
+            <p>Tiles moved: <span id="show-moves">0</span></p>
+            <p>Time spent on puzzle: <span id="show-timer">0</span></p>
+
+            <!-- Sliding picture puzzle: -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td id="tile-11" class="tile-1" onclick="moveTile(1, 1);"></td>
+                        <td id="tile-12" class="tile-2" onclick="moveTile(1, 2);"></td>
+                        <td id="tile-13" class="tile-3" onclick="moveTile(1, 3);"></td>
+                        <td id="tile-14" class="tile-4" onclick="moveTile(1, 4);"></td>
+                    </tr>
+                    <tr>
+                        <td id="tile-21" class="tile-5" onclick="moveTile(2, 1);"></td>
+                        <td id="tile-22" class="tile-6" onclick="moveTile(2, 2);"></td>
+                        <td id="tile-23" class="tile-7" onclick="moveTile(2, 3);"></td>
+                        <td id="tile-24" class="tile-8" onclick="moveTile(2, 4);"></td>
+                    </tr>
+                    <tr>
+                        <td id="tile-31" class="tile-9" onclick="moveTile(3, 1);"></td>
+                        <td id="tile-32" class="tile-10" onclick="moveTile(3, 2);"></td>
+                        <td id="tile-33" class="tile-11" onclick="moveTile(3, 3);"></td>
+                        <td id="tile-34" class="tile-12" onclick="moveTile(3, 4);"></td>
+                    </tr>
+                    <tr>
+                        <td id="tile-41" class="tile-13" onclick="moveTile(4, 1);"></td>
+                        <td id="tile-42" class="tile-14" onclick="moveTile(4, 2);"></td>
+                        <td id="tile-43" class="tile-15" onclick="moveTile(4, 3);"></td>
+                        <td id="tile-44" class="tile-16" onclick="moveTile(4, 4);"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Button for stopping a game: -->
+            <button onClick="stopGame();">Quit</button>
+
+        </div>
+
+        <footer>
+            <p>Lauren Boughner - Wayne State University</p>
+            <p>Last updated: October 26, 2024</p>
+        </footer>
+    </body>
+</html>
